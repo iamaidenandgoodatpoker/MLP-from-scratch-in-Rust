@@ -1,0 +1,21 @@
+pub fn forwardpass(&self, input: &Array1<f32>) -> Vec::Array1<f32>::new() {
+        let mut output = Vec::Array1::<f32>::new()
+        for i in (weights.len() +1) {
+            if i == 0 {
+                output.push(input);
+            }
+            else {
+                let add = Array1::zeros(input.len())
+                for a in (input.len()) {
+                    let mut z = 0;
+                    for b in (input.len()) {
+                        z += weights[i][a][b] * output[i - 1][b];
+                    }
+                    z += biases[i][a];
+                    add[a] = z;
+                }
+                output.push(add)
+            }
+        }
+        return output;
+    }
