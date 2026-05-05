@@ -3,7 +3,7 @@
 Aiden Young: aideny2
 
 
-I will implement Fully connected multilayer perceptron in Rust with only ndarray library.
+Implement Fully connected multilayer perceptron in Rust with only ndarray library.
 
 Weight and bias initialization, forward pass, back propagation, gradient descent, training/testing logic we all be handled manually.
 Our goal is to train the network on the MNIST dataset which consists of 70,000 28x28 grayscale handwritten digits. We aim to hit at least 95% accuracy on testing.
