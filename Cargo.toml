@@ -4,7 +4,8 @@ version = "0.1.0"
 edition = "2024"
 
 [dependencies]
-ndarray = "0.15"
+ndarray = { version = "0.15", features = ["blas"] }
+accelerate-src = "0.3.2"
 ndarray-rand = "0.14"
 rand = "0.8"
 mnist = { version = "0.5", features = ["download"] }
