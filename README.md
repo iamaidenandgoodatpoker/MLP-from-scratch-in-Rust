@@ -1,5 +1,6 @@
 # MLP-from-scratch-in-Rust
 
+Group-9
 Aiden Young: aideny2
 
 
