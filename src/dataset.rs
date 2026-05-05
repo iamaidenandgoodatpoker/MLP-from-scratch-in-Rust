@@ -13,7 +13,12 @@ pub struct DataSet {
 impl DataSet {
     pub fn load_mnist() -> Self {
         let Mnist { trn_img, trn_lbl, tst_img, tst_lbl, .. } = MnistBuilder::new()
-            .base_path("data") //folder where i have all the mnist datasets
+            /* .base_url("https://storage.googleapis.com/cvdf-datasets/mnist/")
+            .download_and_extract()*/
+
+            /*i already have the dataset so i can refer to the path. if you're running this for the first time, comment out
+            the .base_path() function and uncomment the block above */
+            .base_path("data") 
             .label_format_one_hot()
             .finalize();
 
@@ -25,6 +30,7 @@ impl DataSet {
 
         DataSet{ train_x, train_y, test_x, test_y }
     }
+
     pub fn get_shuffled_indices(&self) -> Vec<usize> {
         let mut indices: Vec<usize> = (0..self.train_x.nrows()).collect();
         let mut rng = thread_rng();
