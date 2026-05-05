@@ -1,7 +1,19 @@
 # cs128hproject
 
-Create a multilayer perceptron to read handwriten digits.
+Implement Fully connected multilayer perceptron in Rust with only ndarray library
 
-We will implement all the logic for a fully connected neural network in rust using ReLu, Softmax, and the MNIST dataset.
+Weight and bias initialization, forward pass, back propagation, gradient descent, training/testing logic have all be handled manually.
 
-Goal is to get over 90% accuracy on testing and to run faster than a neural network implemented fully in python.
+Used He-initialization, ReLU activation function, Soft-max on the final layer, cross entropy loss function, and mini batch gradient descent.
+
+Acheived 98.11% accuracy.
+
+Trained a lot faster than a Python implementation with numpy
+
+Epoch:  1 | Test Accuracy: 0.9242%
+Epoch:  2 | Test Accuracy: 0.9320%
+Epoch:  3 | Test Accuracy: 0.9417%
+...
+Epoch: 88 | Test Accuracy: 0.9792%
+Epoch: 89 | Test Accuracy: 0.9806%
+Epoch: 90 | Test Accuracy: 0.9811%
