@@ -7,5 +7,5 @@ edition = "2024"
 ndarray = "0.15"
 ndarray-rand = "0.14"
 rand = "0.8"
-mnist = "0.5"
+mnist = { version = "0.5", features = ["download"] }
 rand_distr = "0.4"
